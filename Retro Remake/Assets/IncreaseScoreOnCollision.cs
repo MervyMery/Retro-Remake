@@ -10,6 +10,8 @@ public class IncreaseScoreOnCollision : MonoBehaviour
         private void OnTriggerEnter2D(Collider2D collision)
     {
         score.currentScore += scoreIncrease;
+
+        collision.transform.position = Vector3.zero;    
     }
 }
    

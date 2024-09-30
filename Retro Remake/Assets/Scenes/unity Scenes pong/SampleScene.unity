@@ -4025,6 +4025,7 @@ GameObject:
   - component: {fileID: 397033176}
   - component: {fileID: 397033175}
   - component: {fileID: 397033178}
+  - component: {fileID: 397033179}
   m_Layer: 0
   m_Name: Right Wall
   m_TagString: Untagged
@@ -4109,7 +4110,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4125,6 +4126,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &397033179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397033174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4974402c7b3a349ba3aeff1a07b5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 1454445345}
+  scoreIncrease: 1
 --- !u!1 &403498593
 GameObject:
   m_ObjectHideFlags: 0
@@ -4709,6 +4724,7 @@ GameObject:
   - component: {fileID: 484677870}
   - component: {fileID: 484677869}
   - component: {fileID: 484677871}
+  - component: {fileID: 484677872}
   m_Layer: 0
   m_Name: 'Computer '
   m_TagString: Untagged
@@ -4845,6 +4861,20 @@ MonoBehaviour:
   speed: 13
   useDynamicBounce: 0
   ball: {fileID: 622011728}
+--- !u!114 &484677872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484677866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e156a195491954682dfc03cf97de4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScore: 0
+  scoreText: {fileID: 211924912}
 --- !u!1 &485269526
 GameObject:
   m_ObjectHideFlags: 0
@@ -12673,6 +12703,7 @@ GameObject:
   - component: {fileID: 1454445340}
   - component: {fileID: 1454445343}
   - component: {fileID: 1454445344}
+  - component: {fileID: 1454445345}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -12822,6 +12853,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 13
   useDynamicBounce: 0
+--- !u!114 &1454445345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454445337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e156a195491954682dfc03cf97de4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScore: 0
+  scoreText: {fileID: 1558899795}
 --- !u!1 &1462447779
 GameObject:
   m_ObjectHideFlags: 0
@@ -14041,7 +14086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4974402c7b3a349ba3aeff1a07b5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 1915387021}
+  score: {fileID: 0}
   scoreIncrease: 1
 --- !u!1 &1564968437
 GameObject:
@@ -16519,7 +16564,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16547,7 +16592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4974402c7b3a349ba3aeff1a07b5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 1915387021}
+  score: {fileID: 484677872}
   scoreIncrease: 1
 --- !u!1 &1915387016
 GameObject:
@@ -16559,8 +16604,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1915387018}
   - component: {fileID: 1915387019}
-  - component: {fileID: 1915387021}
-  - component: {fileID: 1915387020}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -16596,34 +16639,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0
---- !u!114 &1915387020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915387016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e156a195491954682dfc03cf97de4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentScore: 0
-  scoreText: {fileID: 211924912}
---- !u!114 &1915387021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915387016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e156a195491954682dfc03cf97de4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentScore: 0
-  scoreText: {fileID: 1558899795}
 --- !u!1 &1958558568
 GameObject:
   m_ObjectHideFlags: 0
