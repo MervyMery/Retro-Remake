@@ -1,6 +1,7 @@
 
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StarManager : MonoBehaviour
 {
@@ -11,14 +12,18 @@ public class StarManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance)
+        if (!instance)
         {
             instance = this;
         }
     }
-    public void OnGUI()
+
+    public void Update()
     {
-        starsDisplay.text = stars.ToString();
+        if (stars > 130)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     public void ChangeCoins(int amount)
